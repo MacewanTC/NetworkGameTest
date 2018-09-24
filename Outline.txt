@@ -1,0 +1,34 @@
+Entity System
+
+Event System
+
+Controlling thing
+	Control Command Buffer
+
+
+
+
+Render System
+	Update Entities From Current Frame 
+	Render Entities
+	
+Network System
+	Push Control Commands to Network
+	Pull Info from Network
+	Update Last Real Frame	
+
+Physics System
+	Read Latest Control Commands
+	Update Current Frame	
+
+Physics Network Extrapolation System
+	Create Extrapolated Frame From Last Real Frame and Control Commands
+	Interpolate Current and Extrapolated Frame
+
+
+> Update Current Frame / Create Extrapolated Frame 
+	vector objects 
+	step through all objects check collisions
+	vector collisions
+	call collision callbacks
+
