@@ -1,27 +1,31 @@
+#pragma once
 #include "Vec2.h"
 
-using float VectorPrecision;
-
-class LineSegment
+namespace Physics2D 
 {
-	Vec2<VectorPrecision> start, end;
-};
+	using PhysicsPrecision = float;
 
-class ShapePrimitive 
-{
+	class LineSegment
+	{
+		Vec2<PhysicsPrecision> start, end;
+	};
 
-};
+	class ShapePrimitive 
+	{
 
-class Circle : public ShapePrimitive
-{
-public:
-	Vec2<VectorPrecision> center;
-	VectorPrecision radius;
-};
+	};
 
-class Rectangle : public ShapePrimitive
-{
-public:
-	Vec2<VectorPrecision> center, halfExtent;
-	VectorPrecision orientation;
+	class Circle : public ShapePrimitive
+	{
+	public:
+		Vec2<PhysicsPrecision> center;
+		PhysicsPrecision radius;
+	};
+
+	class Rectangle : public ShapePrimitive
+	{
+	public:
+		Vec2<PhysicsPrecision> center, halfExtent;
+		PhysicsPrecision orientation;
+	};
 };

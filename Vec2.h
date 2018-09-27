@@ -1,9 +1,15 @@
+#pragma once
+
 template <typename T>
 class Vec2
 {
 public:
 	Vec2(T tx, T ty);
-	T distanceSquared(const Vec2& other);
+
+	Vec2<T> operator- (const Vec2& other) const;
+
+	T distanceSquared();
+
 	T x,y;
 private:
 };
